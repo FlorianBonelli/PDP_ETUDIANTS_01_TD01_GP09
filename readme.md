@@ -25,6 +25,7 @@ L'évaluation de votre travail sera réalisée sur les critères suivants :
 - Qualité du code (structure, lisibilité, commentaires utiles si et seulement si nécessaire...)
 - Temps nécessaire pour réaliser les étapes
 
+
 ## <ins>Quelques ressources</ins>
 - [Documentation AZ-Delivery](https://cdn.shopify.com/s/files/1/1509/1638/files/ESP_-_32_NodeMCU_Developmentboard_Datenblatt_AZ-Delivery_Vertriebs_GmbH_10f68f6c-a9bb-49c6-a825-07979441739f.pdf?v=1598356497)
 - [Reference framework Arduino](https://www.arduino.cc/reference/en/)
