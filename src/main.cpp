@@ -20,11 +20,6 @@ void setup() {
 
   // Set up the LED pin
   pinMode(LED, OUTPUT);
-}
-
-void loop() {
-  // Wait 5 seconds between measurements
-  delay(5000);
 
   // Read humidity
   float humidity = dht.readHumidity();
@@ -32,18 +27,25 @@ void loop() {
   // Read temperature as Celsius
   float temperature = dht.readTemperature();
 
-  // Check if any reads failed and exit early (to try again next loop)
+  // Check if any reads failed and exit early
   if (isnan(humidity) || isnan(temperature)) {
     Serial.println("Failed to read from DHT sensor!");
-    return;
+  } else {
+    // Print the results to the Serial Monitor
+    Serial.print("Humidity: ");
+    Serial.print(humidity);
+    Serial.println(" %");
+
+    Serial.print("Temperature: ");
+    Serial.print(temperature);
+    Serial.println(" °C");
   }
 
-  // Print the results to the Serial Monitor
-  Serial.print("Humidity: ");
-  Serial.print(humidity);
-  Serial.println(" %");
+  // Enter deep sleep for 5 seconds
+  Serial.println("Entering deep sleep for 5 seconds...");
+  esp_deep_sleep(5000000); // Time in microseconds (5 seconds)
+}
 
-  Serial.print("Temperature: ");
-  Serial.print(temperature);
-  Serial.println(" °C");
+void loop() {
+  // Empty loop
 }
